@@ -18,7 +18,7 @@ class Window:
         self.canvas.update_idletasks()
         self.canvas.update()
 
-    def draw_line(self, line, fill_color):
+    def draw_line(self, line, fill_color="red"):
         line.draw(self.canvas, fill_color)
 
     def wait_for_close(self):

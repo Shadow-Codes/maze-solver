@@ -1,23 +1,23 @@
+from cells import Cell
 from window import Line, Point, Window
 
 
 def main():
     win = Window(800, 600)
 
-    point_1 = Point(200, 300)
-    point_2 = Point(600, 300)
-    point_3 = Point(350, 200)
-    point_4 = Point(100, 750)
-    point_5 = Point(550, 200)
-    point_6 = Point(300, 150)
+    cell_1 = Cell(win)
+    cell_2 = Cell(win)
+    cell_3 = Cell(win)
+    cell_4 = Cell(win)
 
-    first_line = Line(point_1, point_2)
-    second_line = Line(point_3, point_4)
-    third_line = Line(point_5, point_6)
+    cell_1.has_left_wall = False
+    cell_2.has_top_wall = False
+    cell_4.has_bottom_wall = False
 
-    win.draw_line(first_line, "red")
-    win.draw_line(second_line, "black")
-    win.draw_line(third_line, "red")
+    cell_1.draw(50, 50, 150, 150)
+    cell_2.draw(150, 150, 250, 250)
+    cell_3.draw(50, 150, 150, 250)
+    cell_4.draw(150, 50, 250, 150)
 
     win.wait_for_close()
 
