@@ -19,6 +19,10 @@ def main():
     cell_3.draw(50, 150, 150, 250)
     cell_4.draw(150, 50, 250, 150)
 
+    cell_4.draw_move(cell_2)
+    cell_1.draw_move(cell_4)
+    cell_1.draw_move(cell_2)
+
     win.wait_for_close()
 
 
