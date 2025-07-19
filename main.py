@@ -4,14 +4,23 @@ from window import Line, Point, Window
 
 
 def main():
-    win = Window(800, 600)
+    screen_x_axis = 800
+    screen_y_axis = 600
+
+    win = Window(screen_x_axis, screen_y_axis)
+
+    x1 = 50
+    y1 = 50
+    num_rows = 12
+    num_cols = 16
+
     maze_params = {
-        "x1": 50,
-        "y1": 50,
-        "num_rows": 20,
-        "num_cols": 30,
-        "cell_size_x": 20,
-        "cell_size_y": 20,
+        "x1": x1,
+        "y1": y1,
+        "num_rows": num_rows,
+        "num_cols": num_cols,
+        "cell_size_x": (screen_x_axis - 2 * x1) / num_cols,
+        "cell_size_y": (screen_y_axis - 2 * y1) / num_rows,
         "win": win,
     }
 
