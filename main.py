@@ -25,6 +25,7 @@ def main():
     }
 
     maze_drawing = Maze(**maze_params)
+    maze_drawing._Maze__break_entrance_and_exit()
     win.wait_for_close()
 
 

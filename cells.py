@@ -25,12 +25,23 @@ class Cell:
 
         if self.has_left_wall and self.__win:
             self.__win.draw_line(left_wall)
+        elif self.__win and not self.has_left_wall:
+            self.__win.draw_line(left_wall, "white")
+
         if self.has_right_wall and self.__win:
             self.__win.draw_line(right_wall)
+        elif self.__win and not self.has_right_wall:
+            self.__win.draw_line(right_wall, "white")
+
         if self.has_top_wall and self.__win:
             self.__win.draw_line(top_wall)
+        elif self.__win and not self.has_top_wall:
+            self.__win.draw_line(top_wall, "white")
+
         if self.has_bottom_wall and self.__win:
             self.__win.draw_line(bottom_wall)
+        elif self.__win and not self.has_bottom_wall:
+            self.__win.draw_line(bottom_wall, "white")
 
     def calculate_center(self):
         x = (self.__x1 + self.__x2) / 2
