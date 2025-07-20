@@ -24,7 +24,8 @@ def main():
         "win": win,
     }
 
-    _ = Maze(**maze_params)
+    maze_drawing = Maze(**maze_params)
+    maze_drawing.solve()
     win.wait_for_close()
 
 
